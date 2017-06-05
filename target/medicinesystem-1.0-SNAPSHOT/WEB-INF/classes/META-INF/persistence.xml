@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="NewPersistenceUnit">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.model.AttendanceEntity</class>
+        <class>com.model.BedEntity</class>
+        <class>com.model.CostEntity</class>
+        <class>com.model.DiagnosisEntity</class>
+        <class>com.model.DictionaryEntity</class>
+        <class>com.model.HospitalizedEntity</class>
+        <class>com.model.InspectEntity</class>
+        <class>com.model.MedicineEntity</class>
+        <class>com.model.MedicineStockEntity</class>
+        <class>com.model.MedicineUseEntity</class>
+        <class>com.model.PrescriptionEntity</class>
+        <class>com.model.ReservationEntity</class>
+        <class>com.model.StaffInformationEntity</class>
+        <class>com.model.TreatmentEntity</class>
+        <class>com.model.UserInfoEntity</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/medicalsystem"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="123456"/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hbm2ddl.auto" value="update"/>
+        </properties>
+
+
+    </persistence-unit>
+</persistence>

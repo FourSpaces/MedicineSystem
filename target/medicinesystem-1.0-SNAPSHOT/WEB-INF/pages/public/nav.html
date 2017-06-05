@@ -1,0 +1,29 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: kevin
+  Date: 17-2-13
+  Time: 上午10:38
+  To change this template use File | Settings | File Templates.
+--%>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">医药管理系统</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" style="padding-right: 60px;">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown user" id="header-user">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img alt="" src="${__RES__}/img/avatars/avatar3.jpg">
+                        <span class="username">${userInfo.name}</span>
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="${__ROOT__}/logout"><i class="fa fa-power-off"></i>退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>

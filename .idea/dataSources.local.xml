@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="medicalsystem@localhost" uuid="1714a4c9-2d5d-47a0-9a38-32dc51fbf4ea">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+    </data-source>
+    <data-source name="MySQL - movie_system @localhost" uuid="b5fd8d35-d049-42e5-ad09-6d38b79735e3">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>movie_system.*</schema-pattern>
+      <default-schemas>movie_system.*</default-schemas>
+    </data-source>
+  </component>
+</project>

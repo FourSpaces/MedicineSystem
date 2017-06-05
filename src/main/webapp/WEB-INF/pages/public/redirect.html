@@ -1,0 +1,18 @@
+
+<h4><span id="${timeTab}">${timeValue}</span>后跳转</h4>
+<script language="javascript"type="text/javascript">
+
+    var times = ${timeValue};
+    // <%--定义配置参数  timeValue ,toUrl--%>
+
+    setInterval(    function () {
+        times--;
+        if(times < 0){
+            window.location.href="${toUrl}";
+        }
+        else{
+            $("#${timeTab}").html(times);
+        }
+
+    },1000);
+</script>

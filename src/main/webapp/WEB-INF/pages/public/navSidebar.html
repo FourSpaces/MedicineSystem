@@ -1,0 +1,68 @@
+<div class="col-sm-3 col-md-2 sidebar">
+
+    <c:if test="${userInfo.jobType == 1 || userInfo.jobType == 2 || userInfo.jobType == 6 }">
+        <h4>门诊部</h4>
+        <ul class="nav nav-sidebar">
+            <c:choose>
+                <c:when test="${userInfo.jobType == 2}">
+                    <li class=" <c:if test="${sidebarValue == \"/clinic/registration\"}" >active</c:if> "><a href="${__ROOT__}/clinic/registration">挂号处 <span class="sr-only">(current)</span></a></li>
+                </c:when>
+                <c:when test="${userInfo.jobType == 1}">
+                    <li class="<c:if test="${sidebarValue == \"/clinic/diagnosis\"}" >active</c:if> "><a href="${__ROOT__}/clinic/diagnosis">就诊处</a></li>
+                </c:when>
+                <c:otherwise>
+                    <li class="<c:if test="${sidebarValue == \"/clinic/registration\"}" >active</c:if> "><a href="${__ROOT__}/clinic/registration">挂号处 <span class="sr-only">(current)</span></a></li>
+                    <li class="<c:if test="${sidebarValue == \"/clinic/diagnosis\"}" >active</c:if> "><a href="${__ROOT__}/clinic/diagnosis">就诊处</a></li>
+                </c:otherwise>
+            </c:choose>
+        </ul>
+    </c:if>
+
+    <c:if test="${userInfo.jobType == 4 || userInfo.jobType == 5 || userInfo.jobType == 6 }">
+    <h4>住院部</h4>
+    <ul class="nav nav-sidebar">
+
+    <c:choose>
+        <c:when test="${userInfo.jobType == 5}">
+            <li class="<c:if test="${sidebarValue == \"/inpatient/index\"}" >active</c:if> "><a href="${__ROOT__}/inpatient/index">住院前台</a></li>
+            <li class="<c:if test="${sidebarValue == \"/inpatient/bingchuanglist\"}" >active</c:if> "><a href="${__ROOT__}/inpatient/bingchuanglist">病床</a></li>
+
+        </c:when>
+        <c:when test="${userInfo.jobType == 4}">
+            <li class="<c:if test="${sidebarValue == \"/inpatient/diagnosisList\"}" >active</c:if> "><a href="${__ROOT__}/inpatient/diagnosisList">我的病人</a></li>
+        </c:when>
+        <c:otherwise>
+            <li class="<c:if test="${sidebarValue == \"/inpatient/index\"}" >active</c:if> "><a href="${__ROOT__}/inpatient/index">住院前台</a></li>
+            <li class="<c:if test="${sidebarValue == \"/inpatient/bingchuanglist\"}" >active</c:if> "><a href="${__ROOT__}/inpatient/bingchuanglist">病床</a></li>
+            <li class="<c:if test="${sidebarValue == \"/inpatient/diagnosisList\"}" >active</c:if> "><a href="${__ROOT__}/inpatient/diagnosisList">我的病人</a></li>
+
+        </c:otherwise>
+
+    </c:choose>
+
+    </ul>
+    </c:if>
+
+    <c:if test="${userInfo.jobType == 3 || userInfo.jobType == 6 }">
+    <h4>其他</h4>
+    <ul class="nav nav-sidebar">
+        <li class="<c:if test="${sidebarValue == \"/public/chemist\"}" >active</c:if> "><a href="${__ROOT__}/public/chemist">药房</a></li>
+    </ul>
+    </c:if>
+
+    <c:if test="${userInfo.jobType == 6 }">
+    <h4>系统配置</h4>
+    <ul class="nav nav-sidebar">
+        <li class="<c:if test="${sidebarValue == \"/public/dictionary\"}" >active</c:if> "><a href="${__ROOT__}/public/dictionary">数据字典</a></li>
+        <li class="<c:if test="${sidebarValue == \"/admin/staffs\"}" >active</c:if> "><a href="${__ROOT__}/admin/staffs">人员管理</a></li>
+        <li class="<c:if test="${sidebarValue == \"/admin/medicine\"}" >active</c:if> "><a href="${__ROOT__}/admin/medicine">药品管理</a></li>
+        <li class="<c:if test="${sidebarValue == \"/admin/bedlist\"}" >active</c:if> "><a href="${__ROOT__}/admin/bedlist">病床管理</a></li>
+    </ul>
+    </c:if>
+
+    <h4>设置</h4>
+    <ul class="nav nav-sidebar">
+        <li class="<c:if test="${sidebarValue == \"/public/aboutPassword\"}" >active</c:if> "><a href="/public/aboutPassword">修改密码</a></li>
+    </ul>
+
+</div>
